@@ -542,14 +542,11 @@ Student s1 = new Student();
 
 ## Operator Types
 
-There are nine types of character
+There are six types of character
 
 - Arithmetic
 - Assignment
 - Relational / Comparison
 - Logical
-- Unary
-- Ternary
 - Bitwise
-- Shift
 - Increament / Decreament operator
