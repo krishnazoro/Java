@@ -236,11 +236,11 @@ Why?
 ## Types of Data types
 
 1.  There are two types of data types
-                     Data Types
-                         │
-                         ├── Primitive
-                         │
-                         └── Non-Primitive / Reference
+    Data Types
+    │
+    ├── Primitive
+    │
+    └── Non-Primitive / Reference
 
 ### Primitive data types
 
@@ -530,6 +530,33 @@ Student s1 = new Student();
 | **Instance** | Inside class, outside methods | Object       | `String name;`           |
 | **Static**   | Inside class with `static`    | Class        | `static String college;` |
 
+# Casting
+
+## What is casting?
+
+1. Type casting means converting a value from one data type to another data type.
+
+2. There are two types of casting
+
+- Implicit casting
+  1.  Java automatically converts the type.
+
+  ```
+  int a = 10;
+  double b = a;
+  ```
+
+  2.  In java will convert automatically double.
+
+- Explicit casting
+  1.  You manually tell Java to convert the type
+  ```
+  double a = 10.5;
+  int b = (int) a;
+  ```
+
+  2.  We need write int, we need to convert this manually.
+
 # Operators
 
 ## What is an operator?
@@ -544,9 +571,145 @@ Student s1 = new Student();
 
 There are six types of character
 
-- Arithmetic
-- Assignment
-- Relational / Comparison
+- Arithmetic Operator
+
+1. Arithmetic operator is use for doing mathamatical calculation like +, - etc...
+
+2. example
+   ```
+   int a = 10;
+   int b = 5;
+
+   	System.out.println(a + b);
+   	System.out.println(a - b);
+   	System.out.println(a * b);
+   	System.out.println(a / b);
+   	System.out.println(a % b);
+   	System.out.println(a++);
+   	System.out.println(a--);
+   	System.out.println(++b);
+   	System.out.println(--b);
+
+   ```
+
+- Assignment Operator
+
+1. Assignment operators are used to assign or update values in variables.
+
+2. Example
+   ```
+   int a = 10;
+
+   	System.out.println(a = 10);
+   	System.out.println(a += 5);
+   	System.out.println(a -= 5);
+   	System.out.println(a /= 2);
+   	System.out.println(a %= 5);
+   	System.out.println(a *= 5);
+   ```
+
+- Relational / Comparison Operator
+
+1. Assignment operator is use for comparision like to compare which is greater, smaller like that etc...
+
+2. Example
+   ```
+   int a = 10;
+   int b = 5;
+
+   	System.out.println(a > b);
+   	System.out.println(a < b);
+   	System.out.println(a == b);
+   	System.out.println(a >= b);
+   	System.out.println(a <= b);
+   	System.out.println(a != b);
+   ```
+
 - Logical
+
+1. Logical operators are used to combine or reverse conditions, and the result is always true or false.
+
+2. Example
+   ```
+   boolean a  = true ;
+   boolean b = false;
+
+   	System.out.println(!a);
+   	System.out.println(!b);
+
+   	System.out.println(a && b);
+   	System.out.println(a || b);
+
+   ```
+
 - Bitwise
+
+1. Bitwise operators perform operations directly on the individual bits (0 and 1) of integer values.
+2. They are mainly used with byte, short, int, and long
+3. the symbols are Bitwise And(&), Bitwise or(`), Bitwise Xor(^), Bitwise Not(~), Left shift(<<), Right shift(>>), Unsigned (>>>).
+4. Example
+
+   ```
+   int a = 5;
+   int b = 3;
+
+   System.out.println(a & b); //Bitwise And
+
+
+   ```
+
 - Increament / Decreament operator
+
+1. It will increament the 1 value in increament operator and it will decreament the 1 value in decreament operator.
+
+2. There are two types
+   - post increament
+     ```
+     int a = 10;
+     System.out.println(a++); // it will first print a value after it will add 1
+
+     System.out.println(a--); // it will first print a value after it will minus 1
+     ```
+   - pre increament
+     ```
+     int a = 10
+     System.out.println(++b); // It will increament 1 value first and it print
+     System.out.println(--b); // It will decreament 1 value first and it print
+     ```
+
+# Scanner
+
+1. Scanner is a predefined class in Java used to take input from the user, usually through the keyboard.
+
+2. Syntax
+   ```
+   import java.util.Scanner; // Import scanner(package)
+   Scanner sc = new Scanner(System.in);// create scanner object
+   int age = sc.nextInt(); // Take different type of input
+   double age = sc.Double();
+   ```
+3. Example
+
+   ```
+   package firstpr;
+   import java.util.*;// Scanner package
+   public class ScannerEx {
+
+   	public static void main(String[] args) {
+   		// TODO Auto-generated method stub
+
+        Scanner sc = new Scanner(System.in);// Create scanner
+
+   		System.out.println("Enter you first number: ");
+   		int num1 = sc.nextInt();
+
+   		System.out.println("Enter you second number: ");
+   		int num2 = sc.nextInt(); // Different types of inputs
+
+   		System.out.println(num1 * num2);
+
+   		sc.close();
+   	}
+   }
+
+   ```
