@@ -1,6 +1,6 @@
-package firstpr;
+package operators;
 
-public class Arithmeticop {
+public class ArithmeticOp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,7 +16,7 @@ public class Arithmeticop {
 		System.out.println(a--);
 		System.out.println(++b);
 		System.out.println(--b);
-		
+
 	}
 
 }

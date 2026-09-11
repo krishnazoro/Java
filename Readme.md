@@ -713,3 +713,133 @@ There are six types of character
    }
 
    ```
+# Conditional statement
+
+## What is conditional?
+
+1. A conditional statement is used to make a decision in a program based on whether a condition is true or false.
+
+## Types of conditional statement
+
+1. There are four types of conditional statement
+
+- if
+  
+1. If code is true it will run otherwise it won't run.
+
+2. Example
+   ```
+   int age = 20;
+		
+	if (age >= 18) {
+		System.out.println("He can Vote");
+	}
+   ```
+
+- if-else
+
+1. If code is true "if Part will run" otherwise "else part will run".
+
+2. Example
+   ```
+   int age = 17;
+		
+		if(age >= 18) {
+			System.out.println("Eligible for Vote");
+		}
+		else {
+			System.out.println("Not eligible for Vote");
+		}
+   ```
+- if-else-if
+
+1. If code is true "if Part will run" otherwise "else-if part will run" otherwise "else part will run".
+
+2. Example
+   ```
+   int marks = 75;
+
+		if (marks >= 90) {
+		    System.out.println("A+");
+		} 
+		else if (marks >= 75) {
+		    System.out.println("A");
+		} 
+		else if (marks >= 50) {
+		    System.out.println("B");
+		} 
+		else {
+		    System.out.println("Fail");
+		}
+   ```
+
+- nested if
+
+1. The if statement contain another if statement inside. If one "if statement is true it check another if statement".
+
+2. Example
+   ```
+   int age = 20;
+		boolean voterId = false;
+		
+		if(age >= 18) {
+			if(voterId == true) {
+				
+				System.out.println("He can vote");
+			}
+			else {
+				System.out.println("He can't vote");
+			}
+		}
+	```
+- switch
+
+1. switch is used when you want to choose one option from multiple fixed values.
+
+2. Example
+   ```
+   int num = 5;
+		int choice = 2;
+
+		switch (choice) {
+
+		    case 1:
+		        System.out.println("Square = " + (num * num));
+		        break;
+
+		    case 2:
+		        System.out.println("Cube = " + (num * num * num));
+		        break;
+
+		    default:
+		        System.out.println("Invalid choice");
+		}
+   ```
+# Loops
+
+## What is loops?
+
+1. A loop is used to repeat a block of code multiple times until a particular condition becomes false.
+
+
+## Types of Loops
+
+1. There are three types of loops
+
+                                  LOOPS
+                                    │
+                            ┌───────┼────────┐
+                            ↓       ↓        ↓
+                           for    while   do-while
+
+
+- For loop
+
+1. Used when you generally know how many times you want to repeat.
+
+2. Example
+   ```
+   
+   ```
+
+- While loop

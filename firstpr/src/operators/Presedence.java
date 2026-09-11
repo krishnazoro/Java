@@ -1,4 +1,4 @@
-package firstpr;
+package operators;
 
 public class Presedence {
 
@@ -17,6 +17,7 @@ public class Presedence {
 		boolean c = true;
 		
 		System.out.println(!a&&b||c);
+
 	}
 
 }

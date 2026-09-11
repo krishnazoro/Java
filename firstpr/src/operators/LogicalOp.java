@@ -1,10 +1,9 @@
-package firstpr;
+package operators;
 
 public class LogicalOp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		boolean a  = true ;
 		boolean b = false;
 		
@@ -13,7 +12,6 @@ public class LogicalOp {
 		
 		System.out.println(a && b);
 		System.out.println(a || b);
-		
 	}
 
 }
