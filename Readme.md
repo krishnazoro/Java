@@ -898,3 +898,123 @@ There are six types of character
 				System.out.println();
    }
    ```
+
+- Break and continue
+
+### Break 
+
+1. When the break reaches the target it stop the loop completely.
+
+2. Example
+   ```
+   	for(int i = 1; i <= 10; i++) {
+			if(i == 7){
+				break;
+			}
+			System.out.println(i);
+      }
+   ```
+### Continue
+
+1. When the continue reaches the target it skip that one and runs the code fully
+
+2. Example
+   ```
+   	for(int i = 1; i <= 20; i++) {
+			if(i % 2 == 0) {
+				if(i == 16) {
+					break;
+				}
+				
+				System.out.println(i);	
+			}
+		}
+   ```
+# Arrays
+
+## What is Array?
+
+1. An array is used to store multiple values of the same data type in a single variable.
+
+2. In array after declaration it automatically set 0 for every array data.
+
+3. We need to intialize the value for each array data.
+
+4. Example
+   ```
+   String[] clsname = new String[4];
+		clsname[0] = "Krishna";
+		clsname[1] = "Krish";
+		clsname[2] = "Krishn";
+		clsname[3] = "Krishnak";
+
+		for(int i =0; i < 4; i++) {
+			System.out.println(clsname[i]);
+		}
+   ```
+5. `String[] clsname = new String[4];` This declaration in this stage all the value is zero.
+
+6. ```
+   clsname[0] = "Krishna";
+		clsname[1] = "Krish";
+		clsname[2] = "Krishn";
+		clsname[3] = "Krishnak";
+   ```
+   In this we initiallizing the value.
+
+7. ```
+   for(int i =0; i < 4; i++) {
+			System.out.println(clsname[i]);
+		}
+   ```
+   In this stage we are using loop condition to print and see the value.
+
+## What is 2D Array?
+
+1. 2D Array (Two-Dimensional Array) is an array that stores data in rows and columns, like a table or matrix.
+
+2. In this 2D array we use "nested loop".
+
+3. Example
+   ```
+   int[][] matrix = new int[4][2];
+		matrix[0][0] = 1;
+		matrix[0][1] = 2;
+		matrix[1][0] = 3;
+		matrix[1][1] = 4;
+		matrix[2][0] = 5;
+		matrix[2][1] = 6;
+		matrix[3][0] = 7;
+		matrix[3][1] = 8;
+		
+		
+		for(int i = 0; i <4; i++) {
+			for(int j = 0; j < 2; j++) {
+				System.out.print(matrix[i][j]);
+			}
+			System.out.println();
+		}
+   ```
+4. This `int[][] matrix = new int[4][2];` there are two brackets one is for row and another is column. 
+
+5. Example 
+            [4] - no.of.row 
+            [5] - no.of.column
+      
+6. In this 
+         ```
+      matrix[0][0] = 1;
+		matrix[0][1] = 2;
+         ```
+      We need to initialize the value like this.
+
+7. This is 
+         ```
+         for(int i = 0; i <4; i++) {
+			for(int j = 0; j < 2; j++) {
+				System.out.print(matrix[i][j]);
+			}
+			System.out.println();
+		   }
+         ```
+This is called "Nested loop". We need to display the value by using this loop.

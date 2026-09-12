@@ -16,12 +16,12 @@ public class DowhileEx {
 
 		// By using if statement
 
-//		do {
-//		    if (i % 2 == 0) {
-//		        System.out.println(i);
-//		    }
-//		    i--;
-//		} while (i >= num);
+		do {
+		    if (i % 2 == 0) {
+		        System.out.println(i);
+		    }
+		    i--;
+		} while (i >= num);
 
 	}
 
