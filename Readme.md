@@ -839,7 +839,62 @@ There are six types of character
 
 2. Example
    ```
-   
+   Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the number: ");
+		int num = sc.nextInt();
+		
+		for(int i=0; i <= num; i++) {
+			
+			if(i % 2 == 0) {
+				System.out.println(i);
+			}
+		
+		}
+		sc.close();
+		
    ```
 
 - While loop
+
+1. A while loop is a control statement that repeatedly executes a block of code as long as the given condition is true.
+
+2. Example
+   ```
+   int i = 0;
+		int num = 10;
+		
+		while(i <= num) {
+			System.out.println(i);
+			i++;
+		}
+   ```
+
+- Do-while loop
+
+1. A do-while loop is a control statement that executes a block of code at least once and then repeatedly executes it as long as the given condition is true.
+
+2. Example
+   ```
+   int i = 20;
+		int num = 0;
+
+		do {
+		    System.out.println(i);
+		    i--;
+		} 
+		while (i >= num);
+   ```
+- Nested loop
+
+1. A loop inside another loop is called nested loop.
+
+2. Example
+   ```
+   for(int i = 1; i <= 3; i++) {
+			for(int j = 1; j <= 4; j++) {
+				System.out.print(j + " ");
+			}
+				System.out.println();
+   }
+   ```
