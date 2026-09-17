@@ -930,6 +930,90 @@ There are six types of character
 			}
 		}
    ```
+# Methods
+
+## What is method?
+
+1. A method is a reusable block of code that performs a particular task.
+
+2. The tasks are 
+i. Add two numbers → add()
+ii. Check whether eligible → checkEligibility()
+iii. Calculate salary → calculateSalary()
+iv. Display student details → displayStudent()
+
+3. Like this it do some task and Instead of writing the same code again and again, we can put it inside a method and call it whenever needed.
+
+4. Example
+   ```
+   // Display
+   Public class Method {
+
+   static void sayHello() {
+    System.out.println("Hello");
+}
+    public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		sayHello(); // I am calling a method
+		sayHello();
+		sayHello();
+		}
+   }
+    ```
+5. Static - Method Type, void - No return, sayHello() - Method name.
+
+6. In java there is no function, a method is replacement of function.
+
+## Why do we use Methods?
+
+1. It decrease our work and if we need to add some 8 integers 8 times we need to write that every integers and need to write syso. 
+
+2. In method there is no need to do that we can write the method what need to do and we can call the method in the main() method it done the work when we call and how many times can calla and how many times can we call.
+
+3. Example
+   ```
+   Public class Method {
+      static void add(int a, int b) {
+    System.out.println(a + b);
+   }
+   public static void main(String[] args) {
+	// TODO Auto-generated method stub
+   add(10, 20);
+   add(30, 40);
+   add(50, 60);
+   }
+   }
+   ```
+## Benefits
+
+1. The Benefits of methods are
+
+i Code reusability
+ii Less code repetition
+iii Better readability
+iv Easy debugging
+v Easy maintenance
+vi Break large programs into smaller tasks
+
+2. Think like this:
+      Big problem → divide into small tasks → create one method for each task.
+
+## Types of Methods
+
+1. There are two types of methods 
+   i. Static method
+   ii. Non-static methods
+
+### Static method
+
+1. A static method is a method that belongs to the class, not to a particular object.
+
+### Non static method
+
+1. A non-static method belongs to an object of the class.
+
+
 # Arrays
 
 ## What is Array?
@@ -1018,3 +1102,7 @@ There are six types of character
 		   }
          ```
 This is called "Nested loop". We need to display the value by using this loop.
+
+# OOPS
+
+## Class and object
