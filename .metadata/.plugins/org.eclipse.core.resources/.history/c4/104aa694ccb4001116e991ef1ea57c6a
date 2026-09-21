@@ -1,0 +1,15 @@
+package javaBasics;
+
+public class RefrenceDataTypeEx {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  RefrenceDataType s1 = new RefrenceDataType();
+
+	        s1.name = "Krish";
+	        s1.age = 23;
+
+	        System.out.println(s1.name);
+	        System.out.println(s1.age);
+	        
+	}
+}

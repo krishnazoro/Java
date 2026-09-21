@@ -1,0 +1,24 @@
+package javaBasics;
+
+import java.util.*;
+public class Scanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        ScannerEx sc = new ScannerEx(System.in);
+		
+		System.out.println("Enter you first number: ");
+		int num1 = sc.nextInt();
+		
+		System.out.println("Enter you second number: ");
+		int num2 = sc.nextInt();
+		
+		System.out.println(num1 * num2);
+		
+		sc.close();
+
+       
+	}
+
+}

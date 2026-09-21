@@ -1,0 +1,16 @@
+package constructor;
+
+
+public class ConstructorDe {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Constructor c1 = new Constructor("krishna", 23);
+		
+		
+		
+		c1.display();
+
+	}
+
+}

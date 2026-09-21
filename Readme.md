@@ -1,0 +1,1404 @@
+# Java
+
+# Introduction to java
+
+## What is java
+
+1. Java is a highlevel programming language, Object oriented programming and platform independence.
+
+2. Java source code is compiled into bytecode, which is executed by the JVM.
+
+3. Language developed by james gosling and team at sun microstyle in 1991 as oak.
+
+4. Java is a write once a code and run anywhere.
+
+## How java works
+
+1.  Work flow of the java
+
+               Java Source Code
+                      ↓
+                    javac
+                  (Compiler)
+                      ↓
+                   Bytecode
+                   (.class)
+                      ↓
+                     JVM
+            (Java Virtual Machine )
+                      ↓
+                Interpreter + JIT
+                      ↓
+                 Machine Code
+                   (0101)
+                      ↓
+                     CPU
+                   (Output)
+
+## Components of java
+
+1. There are three components
+
+- JDK
+- JRE
+- JVM
+
+### JDK
+
+1.  Java Development kit is a abbrevation of JDK.
+
+2.  And it is used to creating and developing the java program.
+
+3.  It contain JRE + Set of tools such as javac.
+
+4.  Structure of the JDK
+
+                   JDK
+                    ├── JRE
+                    │    └── JVM
+                    └── Development tools
+
+### JRE
+
+1.  Java runtime environment is a abbrevation of JRE.
+
+2.  It provides everything needed to execute a Java application, but not the development tools needed to create/compile one.
+
+3.  JRE contains JVM + Java libraries/runtime components needed to run Java applications.
+
+4.  And javac is NOT part of the JRE; it is a JDK development tool.
+
+5.  Structure of the JRE.
+
+                     JRE
+                      │
+                      ├── JVM
+                      │   └── Executes Java bytecode
+                      │
+                      └── Java Class Libraries
+                      ├── String
+                      ├── System
+                      ├── Scanner
+                      ├── ArrayList
+                      └── many more...
+
+6.  JRE is provide the enviroment to run the code.
+
+### JVM
+
+1.  Java virtual machine is a abbrevation of JVM.
+
+2.  JVM (Java Virtual Machine) is a virtual machine that executes Java bytecode and provides the runtime environment needed to run Java programs.
+
+3.  Structure of the JVM.
+
+                              JVM
+                               │
+                               ├── 1. Class Loader
+                               │
+                               ├── 2. Runtime Data Areas
+                               │     ├── Heap
+                               │     ├── Stack
+                               │     ├── Method Area
+                               │     └── PC Register
+                               │
+                               ├── 3. Execution Engine
+                               │     ├── Interpreter
+                               │     ├── JIT Compiler
+                               │     └── Garbage Collector
+                               │
+                               └── 4. JNI + Native Libraries
+
+## Platform independence
+
+1. Java is a platform independence and we can write a programming code once and runs a code anywhere platform. example: Windows, linux and macos
+
+2. Java is a independent language but JVM is dependent on platform like windows, linux, macos..
+
+## Structure of the program execute
+
+                                Hello.java
+                                     |
+                                   Javac
+                                (Java compiler)
+                                     |
+                    ------------ Hello.class ---------------
+                    |                 |                    |
+                  JVM                JVM                  JVM
+                    |                 |                    |
+               Output                Output              Output
+
+## Usage of java
+
+1. Desktop application (Application which runs on local machine)
+
+2. Web application (Application run on server)
+
+3. Enterprise application (Big server like bank, RBI etc...)
+
+4. Mobile application (Android application, apple application etc...)
+
+5. games (Minecraft, hide online)
+
+## Features of java
+
+1. Simple
+
+2. Secure
+
+3. Robust
+
+4. Platform independendce
+
+5. Portable
+
+6. Dynamic
+
+7. Distributed
+
+8. Multithread
+
+## Basic java program structure
+
+```
+public class HelloWorld {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello World");
+
+    }
+}
+```
+
+1. The notes explain that HelloWorld is the class, main() is the traditional entry point, and System.out.println() displays output.
+
+2. Structure of the program
+   class
+   ↓
+   main()
+   ↓
+   statements
+   ↓
+   output
+
+# Data types
+
+## What is a Data type?
+
+1. A data type tells Java what kind of data a variable is going to store.
+
+2. Example
+
+   ```
+   int age = 25;
+   ```
+
+   - int → data type
+   - age → variable
+   - 25 → value
+
+3. Data type = tells Java what kind of container it is and how much data it can hold.
+
+## Why do we need Data Types?
+
+1. There are three important rules
+
+- To tell Java what type of value we are storing
+
+```
+int age = 25;
+```
+
+age contains an integer.
+
+- To determine memory requirements
+
+1. Different data types require different amounts of memory.
+
+```
+byte a = 10;
+long b = 10000000000L;
+```
+
+2. byte needs much less memory than long.
+
+- To prevent invalid data
+
+```
+int age = "hello";   // ❌ Error
+```
+
+Why?
+
+1. Because int is for whole numbers, not text.
+
+## Types of Data types
+
+1.  There are two types of data types
+    Data Types
+    │
+    ├── Primitive
+    │
+    └── Non-Primitive / Reference
+
+### Primitive data types
+
+1. There are eight types of data types
+
+- byte
+- short
+- int
+- long
+- float
+- double
+- char
+- boolean
+
+2. We can use primitive data types like
+
+#### Integer data types
+
+1. These are used to store whole numbers.
+
+2. There are four types of integer data types
+
+- byte
+
+1. Size of the byte is "1 byte = 8 bits".
+
+2. Example
+   ```
+   byte age = 25;
+   ```
+
+- short
+
+1. The size of the byte is "2 bytes = 16 bits".
+
+2. Example
+   ```
+   short age = 30000;
+   ```
+
+- int
+
+1. The size of the byte is "4 bytes = 32 bits".
+
+2. Example
+   ```
+   int salary = 50000;
+   ```
+
+- long
+
+1. The size of the byte is "8 bytes = 64 bits".
+
+2. Example
+
+   ```
+   long population = 8000000000L;
+   ```
+
+3. The L tells Java that the number is a long literal.
+
+#### Decimal data types
+
+1. These are numbers containing decimal points.
+
+2. There are two types of decimal data types.
+
+-float
+
+1. The size of the byte is "4 bytes = 32 bits".
+
+2. Example
+   ```
+   float price = 99.5f
+   ```
+
+-double
+
+1. The size of the byte is "8 bytes = 64 bits".
+
+2. Example
+   ```
+   double salary = 45000.50;
+   ```
+3. double gives greater precision than float.
+
+4. Usually use double for decimal values.
+
+#### Char
+
+1. char stores one character.
+
+2. The size of the byte is "2 bytes = 16 bits".
+
+3. Example
+   ```
+   char grade = 'A';
+   ```
+4. Char uses Single quotes only.
+
+#### Boolean
+
+1. boolean stores only: - True - False
+
+2. The size of the byte is "1 bytes = 8 bits".
+
+3. Example
+   ```
+   boolean passed = true;
+   ```
+
+### Refrence data types
+
+1.  A reference data type stores a reference (address-like reference) to an object, rather than directly storing the object's actual data in the variable.
+
+2.  There are five types of refrence data types - String - Array - Object/Class - Interface - Enum
+
+- String
+
+1. String is a sequence of characters used to represent text.
+
+2. Example
+   ```
+   String name = "Krishna";
+   ```
+
+- Array
+
+1. An array is a container object that holds a fixed number of values of a single type.
+
+2. Example
+   ```
+   int[] marks = {80, 90, 85};
+   ```
+
+- Class/Object
+
+**I. Class**
+
+1. A class is a blueprint or template from which objects are created.
+
+**II. Object**
+
+1. An object is an instance of a class.
+
+2. Example for object/class.
+
+```
+class Student {
+    String name;
+}
+
+Student s1 = new Student();
+```
+
+- Interface
+
+1. An interface is a reference type in Java that defines a contract that classes can implement.
+
+2. Example
+   ```
+   interface Animal {
+    void sound();
+    }
+   ```
+
+- Enum
+
+1. An enum is a special Java type used to define a collection of predefined constants.
+
+2. Example
+   ```
+   enum Day {
+    MONDAY, TUESDAY, WEDNESDAY
+   }
+   ```
+
+#### Primitive vs Refrence data type
+
+| Primitive data type    | Refrence data type          |
+| ---------------------- | --------------------------- |
+| 1. It can store single | It can store multiple value |
+| value.                 |
+
+# Variable
+
+## What is a variable?
+
+1. A variable is a named memory location used to store a value that can be changed during program execution.
+
+2. Example
+   ```
+   int age = 22;
+   ```
+   int → data type
+   age → variable name
+   22 → value
+   = → assignment operator
+
+## Types of instance
+
+1. There are three types of variable
+   - Local variable
+   - Instance variable
+   - Static variable
+
+### Local variable
+
+1. A local variable is a variable declared inside a method, constructor, or block and is accessible only within that area.
+
+2. Example
+
+   ```
+   class Student {
+
+    void display() {
+        int age = 22;
+
+        System.out.println(age);
+    }
+   }
+   ```
+
+   ```
+    void display() {
+       int age = 22;
+
+       System.out.println(age);
+   }
+   ```
+
+3. Is a local variable because it is declared inside the display() method.
+
+4. We need to use a local variable when you need a value temporarily inside a method or block.
+
+### Instance variable
+
+1. An instance variable is a variable declared inside a class but outside methods, constructors, or blocks, and each object has its own copy.
+
+2. Example
+
+   ```
+   class Student {
+
+      String name;
+      int age;
+    }
+   ```
+
+3. ```
+   String name;
+   int age;
+   ```
+
+   are instance variables.
+
+4. We need to use an instance variable when the data belongs to an individual object.
+
+### Static variable
+
+1. A static variable is a variable declared with the static keyword and is shared by all objects of a class.
+
+2. Example
+
+   ```
+   class Student {
+
+    static String college = "ABC College";
+
+    String name;
+    }
+   ```
+
+   ```
+   static String college = "ABC College";
+   ```
+
+   Is a static variable
+
+3. We need to use a static variable when the value is common/shared among all objects.
+
+## Local Vs Instance Vs Static
+
+| Variable     | Declared where?               | Belongs to   | Example                  |
+| ------------ | ----------------------------- | ------------ | ------------------------ |
+| **Local**    | Inside method/block           | Method/block | `int sum = 10;`          |
+| **Instance** | Inside class, outside methods | Object       | `String name;`           |
+| **Static**   | Inside class with `static`    | Class        | `static String college;` |
+
+# Casting
+
+## What is casting?
+
+1. Type casting means converting a value from one data type to another data type.
+
+2. There are two types of casting
+
+- Implicit casting
+  1.  Java automatically converts the type.
+
+  ```
+  int a = 10;
+  double b = a;
+  ```
+
+  2.  In java will convert automatically double.
+
+- Explicit casting
+  1.  You manually tell Java to convert the type
+
+  ```
+  double a = 10.5;
+  int b = (int) a;
+  ```
+
+  2.  We need write int, we need to convert this manually.
+
+# Operators
+
+## What is an operator?
+
+1. An operator is a symbol that tells Java to perform an operation on one or more values or variables.
+
+## Why we need an operator?
+
+1. Without operators, we couldn't easily: - Calculate values - Compare values - Assign/update values - Check conditions - Make logical decisions - Increase/decrease values
+
+## Operator Types
+
+There are six types of character
+
+- Arithmetic Operator
+
+1. Arithmetic operator is use for doing mathamatical calculation like +, - etc...
+
+2. example
+
+   ```
+   int a = 10;
+   int b = 5;
+
+   	System.out.println(a + b);
+   	System.out.println(a - b);
+   	System.out.println(a * b);
+   	System.out.println(a / b);
+   	System.out.println(a % b);
+   	System.out.println(a++);
+   	System.out.println(a--);
+   	System.out.println(++b);
+   	System.out.println(--b);
+
+   ```
+
+- Assignment Operator
+
+1. Assignment operators are used to assign or update values in variables.
+
+2. Example
+
+   ```
+   int a = 10;
+
+   	System.out.println(a = 10);
+   	System.out.println(a += 5);
+   	System.out.println(a -= 5);
+   	System.out.println(a /= 2);
+   	System.out.println(a %= 5);
+   	System.out.println(a *= 5);
+   ```
+
+- Relational / Comparison Operator
+
+1. Assignment operator is use for comparision like to compare which is greater, smaller like that etc...
+
+2. Example
+
+   ```
+   int a = 10;
+   int b = 5;
+
+   	System.out.println(a > b);
+   	System.out.println(a < b);
+   	System.out.println(a == b);
+   	System.out.println(a >= b);
+   	System.out.println(a <= b);
+   	System.out.println(a != b);
+   ```
+
+- Logical
+
+1. Logical operators are used to combine or reverse conditions, and the result is always true or false.
+
+2. Example
+
+   ```
+   boolean a  = true ;
+   boolean b = false;
+
+   	System.out.println(!a);
+   	System.out.println(!b);
+
+   	System.out.println(a && b);
+   	System.out.println(a || b);
+
+   ```
+
+- Bitwise
+
+1. Bitwise operators perform operations directly on the individual bits (0 and 1) of integer values.
+2. They are mainly used with byte, short, int, and long
+3. the symbols are Bitwise And(&), Bitwise or(`), Bitwise Xor(^), Bitwise Not(~), Left shift(<<), Right shift(>>), Unsigned (>>>).
+4. Example
+
+   ```
+   int a = 5;
+   int b = 3;
+
+   System.out.println(a & b); //Bitwise And
+
+
+   ```
+
+- Increament / Decreament operator
+
+1. It will increament the 1 value in increament operator and it will decreament the 1 value in decreament operator.
+
+2. There are two types
+   - post increament
+
+     ```
+     int a = 10;
+     System.out.println(a++); // it will first print a value after it will add 1
+
+     System.out.println(a--); // it will first print a value after it will minus 1
+     ```
+
+   - pre increament
+     ```
+     int a = 10
+     System.out.println(++b); // It will increament 1 value first and it print
+     System.out.println(--b); // It will decreament 1 value first and it print
+     ```
+
+# Scanner
+
+1. Scanner is a predefined class in Java used to take input from the user, usually through the keyboard.
+
+2. Syntax
+   ```
+   import java.util.Scanner; // Import scanner(package)
+   Scanner sc = new Scanner(System.in);// create scanner object
+   int age = sc.nextInt(); // Take different type of input
+   double age = sc.Double();
+   ```
+3. Example
+
+   ```
+   package firstpr;
+   import java.util.*;// Scanner package
+   public class ScannerEx {
+
+   	public static void main(String[] args) {
+   		// TODO Auto-generated method stub
+
+        Scanner sc = new Scanner(System.in);// Create scanner
+
+   		System.out.println("Enter you first number: ");
+   		int num1 = sc.nextInt();
+
+   		System.out.println("Enter you second number: ");
+   		int num2 = sc.nextInt(); // Different types of inputs
+
+   		System.out.println(num1 * num2);
+
+   		sc.close();
+   	}
+   }
+
+   ```
+
+# Conditional statement
+
+## What is conditional?
+
+1. A conditional statement is used to make a decision in a program based on whether a condition is true or false.
+
+## Types of conditional statement
+
+1. There are four types of conditional statement
+
+- if
+
+1. If code is true it will run otherwise it won't run.
+
+2. Example
+   ```
+   int age = 20;
+
+   if (age >= 18) {
+   	System.out.println("He can Vote");
+   }
+   ```
+
+- if-else
+
+1. If code is true "if Part will run" otherwise "else part will run".
+
+2. Example
+   ```
+   int age = 17;
+
+   	if(age >= 18) {
+   		System.out.println("Eligible for Vote");
+   	}
+   	else {
+   		System.out.println("Not eligible for Vote");
+   	}
+   ```
+
+- if-else-if
+
+1. If code is true "if Part will run" otherwise "else-if part will run" otherwise "else part will run".
+
+2. Example
+
+   ```
+   int marks = 75;
+
+   	if (marks >= 90) {
+   	    System.out.println("A+");
+   	}
+   	else if (marks >= 75) {
+   	    System.out.println("A");
+   	}
+   	else if (marks >= 50) {
+   	    System.out.println("B");
+   	}
+   	else {
+   	    System.out.println("Fail");
+   	}
+   ```
+
+- nested if
+
+1. The if statement contain another if statement inside. If one "if statement is true it check another if statement".
+
+2. Example
+   ```
+   int age = 20;
+   	boolean voterId = false;
+
+   	if(age >= 18) {
+   		if(voterId == true) {
+
+   			System.out.println("He can vote");
+   		}
+   		else {
+   			System.out.println("He can't vote");
+   		}
+   	}
+   ```
+
+- switch
+
+1. switch is used when you want to choose one option from multiple fixed values.
+
+2. Example
+
+   ```
+   int num = 5;
+   	int choice = 2;
+
+   	switch (choice) {
+
+   	    case 1:
+   	        System.out.println("Square = " + (num * num));
+   	        break;
+
+   	    case 2:
+   	        System.out.println("Cube = " + (num * num * num));
+   	        break;
+
+   	    default:
+   	        System.out.println("Invalid choice");
+   	}
+   ```
+
+# Loops
+
+## What is loops?
+
+1. A loop is used to repeat a block of code multiple times until a particular condition becomes false.
+
+## Types of Loops
+
+1.  There are three types of loops
+
+                                  LOOPS
+                                    │
+                            ┌───────┼────────┐
+                            ↓       ↓        ↓
+                           for    while   do-while
+
+- For loop
+
+1. Used when you generally know how many times you want to repeat.
+
+2. Example
+   ```
+   Scanner sc = new Scanner(System.in);
+
+   	System.out.println("Enter the number: ");
+   	int num = sc.nextInt();
+
+   	for(int i=0; i <= num; i++) {
+
+   		if(i % 2 == 0) {
+   			System.out.println(i);
+   		}
+
+   	}
+   	sc.close();
+
+   ```
+
+- While loop
+
+1. A while loop is a control statement that repeatedly executes a block of code as long as the given condition is true.
+
+2. Example
+   ```
+   int i = 0;
+   	int num = 10;
+
+   	while(i <= num) {
+   		System.out.println(i);
+   		i++;
+   	}
+   ```
+
+- Do-while loop
+
+1. A do-while loop is a control statement that executes a block of code at least once and then repeatedly executes it as long as the given condition is true.
+
+2. Example
+
+   ```
+   int i = 20;
+   	int num = 0;
+
+   	do {
+   	    System.out.println(i);
+   	    i--;
+   	}
+   	while (i >= num);
+   ```
+
+- Nested loop
+
+1. A loop inside another loop is called nested loop.
+
+2. Example
+   ```
+   for(int i = 1; i <= 3; i++) {
+   		for(int j = 1; j <= 4; j++) {
+   			System.out.print(j + " ");
+   		}
+   			System.out.println();
+   }
+   ```
+
+- Break and continue
+
+### Break
+
+1. When the break reaches the target it stop the loop completely.
+
+2. Example
+   ```
+   	for(int i = 1; i <= 10; i++) {
+   		if(i == 7){
+   			break;
+   		}
+   		System.out.println(i);
+      }
+   ```
+
+### Continue
+
+1. When the continue reaches the target it skip that one and runs the code fully
+
+2. Example
+   ```
+   	for(int i = 1; i <= 20; i++) {
+   		if(i % 2 == 0) {
+   			if(i == 16) {
+   				break;
+   			}
+
+   			System.out.println(i);
+   		}
+   	}
+   ```
+
+# Arrays
+
+## What is Array?
+
+1. An array is used to store multiple values of the same data type in a single variable.
+
+2. In array after declaration it automatically set 0 for every array data.
+
+3. We need to intialize the value for each array data.
+
+4. Example
+
+   ```
+   String[] clsname = new String[4];
+   	clsname[0] = "Krishna";
+   	clsname[1] = "Krish";
+   	clsname[2] = "Krishn";
+   	clsname[3] = "Krishnak";
+
+   	for(int i =0; i < 4; i++) {
+   		System.out.println(clsname[i]);
+   	}
+   ```
+
+5. `String[] clsname = new String[4];` This declaration in this stage all the value is zero.
+
+6. ```
+   clsname[0] = "Krishna";
+   	clsname[1] = "Krish";
+   	clsname[2] = "Krishn";
+   	clsname[3] = "Krishnak";
+   ```
+
+   In this we initiallizing the value.
+
+7. ```
+   for(int i =0; i < 4; i++) {
+   		System.out.println(clsname[i]);
+   	}
+   ```
+   In this stage we are using loop condition to print and see the value.
+
+## What is 2D Array?
+
+1. 2D Array (Two-Dimensional Array) is an array that stores data in rows and columns, like a table or matrix.
+
+2. In this 2D array we use "nested loop".
+
+3. Example
+   ```
+   int[][] matrix = new int[4][2];
+   	matrix[0][0] = 1;
+   	matrix[0][1] = 2;
+   	matrix[1][0] = 3;
+   	matrix[1][1] = 4;
+   	matrix[2][0] = 5;
+   	matrix[2][1] = 6;
+   	matrix[3][0] = 7;
+   	matrix[3][1] = 8;
+
+
+   	for(int i = 0; i <4; i++) {
+   		for(int j = 0; j < 2; j++) {
+   			System.out.print(matrix[i][j]);
+   		}
+   		System.out.println();
+   	}
+   ```
+4. This `int[][] matrix = new int[4][2];` there are two brackets one is for row and another is column.
+
+5. Example
+   [4] - no.of.row
+   [5] - no.of.column
+6. In this
+   `   matrix[0][0] = 1;
+	matrix[0][1] = 2;
+     `
+   We need to initialize the value like this.
+
+7. This is
+   `          for(int i = 0; i <4; i++) {
+			for(int j = 0; j < 2; j++) {
+				System.out.print(matrix[i][j]);
+			}
+			System.out.println();
+		   }
+         `
+   This is called "Nested loop". We need to display the value by using this loop.
+
+# OOPS
+
+## Class
+
+### Definition of class
+
+1. A class is a blueprint/template used to create objects.
+
+2. Example: "Imagine a Student form".
+
+   ```
+   class Student {
+
+    int rollNo;
+    String name;
+   }
+   ```
+
+3. Student - Class
+
+   int rollNo;
+   String name; - Instance variable
+
+   The instance variable explain later.
+
+## Object
+
+## Definition of object
+
+1. An object is an instance of a class.
+
+2. Example: "Imagine a Student form".
+
+   ```
+   class Student {
+
+    int rollNo;
+    String name;
+   }
+
+   public class Main {
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+    }
+   }
+   ```
+
+3. ` Student s1 = new Student();`now we created a object and we can create a multiple onject.
+
+## Constructor
+
+### Definition of constructor
+
+1. A constructor is a special member of a class that is automatically called when an object is created.
+
+### Important characteristics:
+
+1. Constructor name must be the same as class name.
+
+2. It has no return type.
+
+3. It is automatically called when object is created.
+
+4. Mainly used to initialize object data.
+
+### Types of constructor
+
+1. There are two types of constructor
+
+- Default / No-Argument Constructor
+
+1. A constructor that has no parameter
+
+2. Example
+
+   ```
+   class Student {
+
+    Student() {
+        System.out.println("Student created");
+    }
+   }
+   public class Main {
+   public static void main(String[] args) {
+
+   Student s1 = new Student();
+    }
+   }
+   ```
+
+3. `Student()` is the constructor.
+
+- Parameterized Constructor
+
+1. A constructor that accepts parameters.
+
+2. Example
+
+   ```
+   class Student {
+
+    int rollNo;
+    String name;
+
+    Student(int r, String n) {
+        rollNo = r;
+        name = n;
+    }
+   }
+   public class Main {
+   public static void main(String[] args) {
+
+   Student s1 = new Student(101, "Arun");
+    }
+   }
+   ```
+
+## Non-Static Variable
+
+### Definition of the Non-Static Variable
+
+1. Non-static variable is each object gets its own copy and it belongs to the object.
+
+2. Example
+
+   ```
+   class Student {
+
+    String name;
+    int age;
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        Student s2 = new Student();
+
+        s1.name = "Krish";
+        s1.age = 23;
+
+        s2.name = "Arun";
+        s2.age = 25;
+
+        System.out.println(s1.name);
+        System.out.println(s1.age);
+
+        System.out.println(s2.name);
+        System.out.println(s2.age);
+    }
+   }
+   ```
+
+3. String name;
+   int age; - It is non static variable
+
+They both has its own copy and the copies are
+
+        s1.name = "Krish";
+        s1.age = 23;
+
+        s2.name = "Arun";
+        s2.age = 25;
+
+## Static variable
+
+### Definition of Static variable
+
+1. A static variable belongs to the class, it belong to the object.
+
+2. Example
+
+   ```
+   class Student {
+
+    String name;
+    int age;
+
+    static String college = "C-DAC";
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        Student s2 = new Student();
+
+        s1.name = "Krish";
+        s1.age = 23;
+
+        s2.name = "Arun";
+        s2.age = 25;
+
+        System.out.println(s1.name);
+        System.out.println(s1.age);
+        System.out.println(s1.college);
+
+        System.out.println(s2.name);
+        System.out.println(s2.age);
+        System.out.println(s2.college);
+
+        System.out.println(Student.college);
+    }
+   }
+   ```
+
+3. `static String college = "C-DAC";` It is the static variable and it not belog t the object.
+
+4. And it is directly access by the class `System.out.println(Student.college);`
+
+   Student - Class
+   . - to access a class
+   college - static variable name
+
+# Methods
+
+## What is method?
+
+1. A method is a reusable block of code that performs a particular task.
+
+2. The tasks are
+   i. Add two numbers → add()
+   ii. Check whether eligible → checkEligibility()
+   iii. Calculate salary → calculateSalary()
+   iv. Display student details → displayStudent()
+
+3. Like this it do some task and Instead of writing the same code again and again, we can put it inside a method and call it whenever needed.
+
+4. Example
+
+   ````
+   // Display
+   Public class Method {
+
+   static void sayHello() {
+    System.out.println("Hello");
+   }
+    public static void main(String[] args) {
+   		// TODO Auto-generated method stub
+
+   		sayHello(); // I am calling a method
+   		sayHello();
+   		sayHello();
+   		}
+   }
+    ```
+   ````
+
+5. Static - Method Type, void - No return, sayHello() - Method name.
+
+6. In java there is no function, a method is replacement of function.
+
+## Why do we use Methods?
+
+1. It decrease our work and if we need to add some 8 integers 8 times we need to write that every integers and need to write syso.
+
+2. In method there is no need to do that we can write the method what need to do and we can call the method in the main() method it done the work when we call and how many times can calla and how many times can we call.
+
+3. Example
+   ```
+   Public class Method {
+      static void add(int a, int b) {
+    System.out.println(a + b);
+   }
+   public static void main(String[] args) {
+   // TODO Auto-generated method stub
+   add(10, 20);
+   add(30, 40);
+   add(50, 60);
+   }
+   }
+   ```
+
+## Benefits
+
+1. The Benefits of methods are
+
+i Code reusability
+ii Less code repetition
+iii Better readability
+iv Easy debugging
+v Easy maintenance
+vi Break large programs into smaller tasks
+
+2. Think like this:
+   Big problem → divide into small tasks → create one method for each task.
+
+## Types of Methods
+
+1. There are two types of methods
+   i. Static method
+   ii. Non-static methods
+
+### Static method
+
+1. A static method is a method that belongs to the class, not to a particular object.
+
+### Non static method
+
+1. A non-static method belongs to an object of the class.
+
+## Encapsulation
+
+### Defintion of encapsulation
+
+1. Encapsulation means wrapping data and methods together in a class and controlling access to the data.
+
+2. Usually, we make variables private and access them through getter and setter methods.
+
+3. Example
+   ```
+   class Student {
+
+    private int age;
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+   public static void main(String[] args) {
+
+   Student s1 = new Student();
+
+   s1.setAge(23);
+
+   System.out.println(s1.getAge());
+   }
+   ```
+4. private int age; → Data is hidden/protected
+   setAge() → Used to set/change the data
+   getAge() → Used to access/read the data
+
+## Inheritance
+
+### Definition of inheritance
+
+1. Inheritance is the process by which one class acquires the properties and methods of another class.
+
+2. The two important classes are:
+   Parent / Superclass → class giving the properties/methods
+   Child / Subclass → class receiving/inheriting them
+
+### Syntax
+
+1. They use "extends" a word to another class to adopt parent class behaviour.
+
+2. Example
+   ```
+   class Animal {
+
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+   }
+   class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+   }
+   ```
+
+### Types of inheritance
+
+1. 
+
