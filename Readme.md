@@ -736,6 +736,7 @@ There are six types of character
 1. If code is true it will run otherwise it won't run.
 
 2. Example
+
    ```
    int age = 20;
 
@@ -749,6 +750,7 @@ There are six types of character
 1. If code is true "if Part will run" otherwise "else part will run".
 
 2. Example
+
    ```
    int age = 17;
 
@@ -788,6 +790,7 @@ There are six types of character
 1. The if statement contain another if statement inside. If one "if statement is true it check another if statement".
 
 2. Example
+
    ```
    int age = 20;
    	boolean voterId = false;
@@ -849,6 +852,7 @@ There are six types of character
 1. Used when you generally know how many times you want to repeat.
 
 2. Example
+
    ```
    Scanner sc = new Scanner(System.in);
 
@@ -871,6 +875,7 @@ There are six types of character
 1. A while loop is a control statement that repeatedly executes a block of code as long as the given condition is true.
 
 2. Example
+
    ```
    int i = 0;
    	int num = 10;
@@ -933,6 +938,7 @@ There are six types of character
 1. When the continue reaches the target it skip that one and runs the code fully
 
 2. Example
+
    ```
    	for(int i = 1; i <= 20; i++) {
    		if(i % 2 == 0) {
@@ -994,6 +1000,7 @@ There are six types of character
 2. In this 2D array we use "nested loop".
 
 3. Example
+
    ```
    int[][] matrix = new int[4][2];
    	matrix[0][0] = 1;
@@ -1013,6 +1020,7 @@ There are six types of character
    		System.out.println();
    	}
    ```
+
 4. This `int[][] matrix = new int[4][2];` there are two brackets one is for row and another is column.
 
 5. Example
@@ -1020,18 +1028,18 @@ There are six types of character
    [5] - no.of.column
 6. In this
    `   matrix[0][0] = 1;
-	matrix[0][1] = 2;
-     `
+matrix[0][1] = 2;
+  `
    We need to initialize the value like this.
 
 7. This is
    `          for(int i = 0; i <4; i++) {
-			for(int j = 0; j < 2; j++) {
-				System.out.print(matrix[i][j]);
-			}
-			System.out.println();
-		   }
-         `
+		for(int j = 0; j < 2; j++) {
+			System.out.print(matrix[i][j]);
+		}
+		System.out.println();
+	   }
+      `
    This is called "Nested loop". We need to display the value by using this loop.
 
 # OOPS
@@ -1342,6 +1350,7 @@ vi Break large programs into smaller tasks
 2. Usually, we make variables private and access them through getter and setter methods.
 
 3. Example
+
    ```
    class Student {
 
@@ -1364,6 +1373,7 @@ vi Break large programs into smaller tasks
    System.out.println(s1.getAge());
    }
    ```
+
 4. private int age; → Data is hidden/protected
    setAge() → Used to set/change the data
    getAge() → Used to access/read the data
@@ -1383,6 +1393,7 @@ vi Break large programs into smaller tasks
 1. They use "extends" a word to another class to adopt parent class behaviour.
 
 2. Example
+
    ```
    class Animal {
 
@@ -1400,5 +1411,10 @@ vi Break large programs into smaller tasks
 
 ### Types of inheritance
 
-1. 
+1. There are five types of inheritance
 
+- Single inheritance
+- Multilevel inheritance
+- Hirerarchial inheritance
+- Multiple inheritance
+- Hybrid inheritance
